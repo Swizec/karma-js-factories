@@ -5,8 +5,8 @@ var pattern = function (file) {
 };
 
 var framework = function (files) {
-    files.unshift(pattern(path.resolve(require.resolve('js-factories'), '../../pkg/js-factories.js')));
+    files.unshift(pattern(path.resolve(require.resolve('js-factories'), '../../js-factories/js-factories.js')));
 };
 
-framework.$inject = ['config.filed'];
+framework.$inject = ['config.files'];
 module.exports = {'framework:js-factories': ['factory', framework]};
